@@ -1,26 +1,42 @@
+<script setup>
+import { RouterView } from 'vue-router'
+</script>
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-main>
+      <RouterView />
+    </v-main>
+  </v-app>
 </template>
 
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@500&display=swap");
+
+html,
+body {
+  font-family: "Kantumruy Pro";
+}
+</style>
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginPage from './components/LoginPage.vue'
+import OTPPage from './components/OTPPage.vue';
+import RegisterPage from './components/RegisterPage.vue';
+import "./index.css";
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    LoginPage,
+    RegisterPage,
+    OTPPage
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
