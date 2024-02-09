@@ -4,15 +4,16 @@ import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
 import { createRouter, createWebHistory } from "vue-router";
 
-import LoginPageVue from "./components/LoginPage.vue";
-import RegisterPageVue from "./components/RegisterPage.vue";
-import OTPPageVue from "./components/OTPPage.vue";
+import LoginPageVue from "./components/Auth/LoginPage.vue";
+import RegisterPageVue from "./components/Auth/RegisterPage.vue";
+import OTPPageVue from "./components/Auth/OTPPage.vue";
+import WeaponInformationVue from "./components/WeaponInfo/WeaponInformation.vue";
 
 loadFonts();
 
 const routes = [
   {
-    path: "/",
+    path: "/login",
     component: LoginPageVue,
   },
   {
@@ -22,6 +23,10 @@ const routes = [
   {
     path: "/otp",
     component: OTPPageVue,
+  },
+  {
+    path: "/",
+    component: WeaponInformationVue
   },
 ];
 

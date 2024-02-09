@@ -20,15 +20,19 @@ body {
 </style>
 
 <script>
-import LoginPage from './components/LoginPage.vue'
-import OTPPage from './components/OTPPage.vue';
-import RegisterPage from './components/RegisterPage.vue';
+import LoginPage from './components/Auth/LoginPage.vue'
+import OTPPage from './components/Auth/OTPPage.vue';
+import RegisterPage from './components/Auth/RegisterPage.vue';
+import WeaponInformation from './components/WeaponInfo/WeaponInformation.vue';
+import Header from './components/Header.vue';
 import "./index.css";
 
 export default {
   name: 'App',
 
   components: {
+    Header,
+    WeaponInformation,
     LoginPage,
     RegisterPage,
     OTPPage
